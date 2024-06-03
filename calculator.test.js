@@ -53,7 +53,9 @@ describe("Calculator", () => {
 
     it("Divide by 0, get error", () => {
 
-        expect(calculator.divide(1, 0)).toBe("Can't devide by 0")
+        expect( () => {
+            calculator.divide(1, 0)
+        }).toThrow()
 
     })
 

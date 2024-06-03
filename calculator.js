@@ -14,7 +14,7 @@ class Calculator {
 
     divide (a, b) {
         if (b == 0)
-            return "Can't devide by 0"
+            throw new Error("Can't devide by 0")
 
         return a / b;
     }
