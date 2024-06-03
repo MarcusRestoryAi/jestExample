@@ -13,7 +13,8 @@ class Calculator {
     }
 
     divide (a, b) {
-        if (b == 0) return Error("Can't devide by 0")
+        if (b == 0)
+            return "Can't devide by 0"
 
         return a / b;
     }

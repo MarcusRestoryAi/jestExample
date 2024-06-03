@@ -5,7 +5,7 @@ describe("Calculator", () => {
 
     let calculator
 
-    beforeEach( () => {
+    beforeAll( () => {
         calculator = new Calculator()
     })
 
@@ -31,6 +31,30 @@ describe("Calculator", () => {
 
         //Expect (assert)
         expect(sum).toBe(expected)
+    })
+
+    it("Subtrahera test", () => {
+
+        expect(calculator.sub(10, 6)).toBe(4)
+
+    })
+
+    it("Succesfull divide", () => {
+
+        expect(calculator.divide(20, 5)).toBe(4)
+
+    })
+
+    it("Multiplication", () => {
+
+        expect(calculator.multi(37, 68)).toBe(2516)
+
+    })
+
+    it("Divide by 0, get error", () => {
+
+        expect(calculator.divide(1, 0)).toBe("Can't devide by 0")
+
     })
 
 })
